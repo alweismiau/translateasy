@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="h-screen bg-slate-300">
     <nav class="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-500 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-500">
       <div class="container flex flex-wrap items-center justify-between mx-auto">
         <!-- logo -->
@@ -7,11 +7,15 @@
           <img src="~/assets/logo.png" class="mr-4 sm:h-11" alt="Translateasy logo" />
           <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Translateasyy</span>
         </div>
-        <!-- profile -->
+        <!-- language -->
         <div class="flex md:order-2">
-          <button>
-            <img src="~/assets/profile.png" class="sm:h-18" alt="Profile logo" />
-          </button>
+          <select
+            id="countries"
+            class="bg-pink-50 border border-pink-100  text-pink-100 text-sm rounded-lg focus:ring-pink-200 focus:border-pink-100 block w-full p-2.5 dark:bg-pink-600 dark:border-pink-600 dark:placeholder-pink-400 dark:text-white dark:focus:ring-pink-500 dark:focus:border-pink-500 focus:ring-2 hover-bg-pink-100 dark:hover:bg-pink-700"
+          >
+            <option selected>Indonesia</option>
+            <option value="US">English</option>
+          </select>
         </div>
         <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
           <ul class="flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
@@ -26,44 +30,15 @@
       </div>
     </nav>
     <!-- isi -->
-    <div class="bg-white rounded-2xl container mx-auto mt-64 p-2 shadow-2xl px-4">
-      <div>
-        <!-- <button
-          id="dropdownDefaultButton"
-          data-dropdown-toggle="dropdown"
-          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 mx-14 mt-8 text-center inline-flex items-center dark:bg-pink-600 dark:hover:bg-pink-400 dark:focus:ring-pink-300"
-          type="button"
-          v-on:click="flag ? (flag = false) : (flag = true)"
-        >
-          Dropdown button
-          <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button> -->
-        <!-- Dropdown menu -->
-        <!-- <div id="dropdown" class="z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 mx-14 my-2 z-99 fixed" :class="{ hidden: flag == true }">
-          <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">English</a>
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Indonesian</a>
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Japanese</a>
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dutch</a>
-            </li>
-          </ul>
-        </div> -->
-        <div class="mt-6 mx-12 p-2 font-inter grid grid-cols-3 gap-1">
+    <div class="bg-white rounded-2xl container mx-auto translate-y-[14vh] shadow-2xl">
+        <div class=" mx-14 pt-6 font-inter grid grid-cols-3">
           <select
             id="countries"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mx-2"
+            class="bbg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mx-2"
           >
-            <option selected>Choose a country</option>
+            <option selected>Choose a language</option>
             <option value="US">English</option>
+            <option value="ID">Indonesia</option>
             <option value="CA">Canada</option>
             <option value="FR">France</option>
             <option value="DE">Germany</option>
@@ -78,14 +53,14 @@
             id="countries"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 -mx-2"
           >
-            <option selected>Choose a country</option>
+            <option selected>Choose a language</option>
             <option value="US">English</option>
+            <option value="ID">Indonesia</option>
             <option value="CA">Canada</option>
             <option value="FR">France</option>
             <option value="DE">Germany</option>
           </select>
         </div>
-      </div>
 
       <!--tabel bahasa-->
       <div class="mt-4 mx-8 mb-8 p-2 font-inter grid grid-cols-2 gap-2">
@@ -104,7 +79,7 @@
       </div>
 
       <!--Submit-->
-      <div class="mt-4 mx-8 mb-8 p-2 font-inter grid grid-cols-5">
+      <div class="mx-10 mb-8 pb-9 font-inter grid grid-cols-5">
         <label></label>
         <button>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-14 h-14 mx-40 rounded-full bg-slate-300 p-4 hover:bg-gray-200">
@@ -126,42 +101,6 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
         </svg>
       </div>
-      <!-- <div class="py-5 px-10">
-      <input
-        id="text"
-        class="p-5 min-w-full text-center rounded-xl bg-gray-100 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 focus:outline-none text-white placeholder:text-gray-100"
-        type="text"
-        placeholder="type here"
-      /><br />
-      <div>
-        <select
-          name="trans"
-          id="trans"
-          class="px-5 mt-10 mx-auto rounded-3xl bg-gray-100 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-white"
-        >
-          <option value="en">ENGLISH</option>
-          <option value="id">INDO</option>
-        </select>
-        <div class="py-5 px-10">
-          <input
-            id="text"
-            class="p-5 min-w-full text-center rounded-xl bg-gray-100 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 focus:outline-none text-white placeholder:text-gray-100"
-            type="text"
-            placeholder="type here"
-          /><br />
-        </div>
-      </div>
-      <br />
-      <div class="flex justify-evenly">
-        <button type="submit" class="text-white font-semibold">Speak</button>
-        <button type="submit" class="text-white font-semibold">
-          Translate
-        </button>
-        <button type="submit" class="text-white font-semibold">Fusion</button>
-      </div>
-      <section id="translate" class="text-center pt-6 pb-2"></section>
-    </div> -->
-      <!-- </div> -->
     </div>
   </div>
 </template>
