@@ -28,7 +28,7 @@
     <!-- isi -->
     <div class="bg-white rounded-2xl container mx-auto mt-64 p-2 shadow-2xl px-4">
       <div>
-        <button
+        <!-- <button
           id="dropdownDefaultButton"
           data-dropdown-toggle="dropdown"
           class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 mx-14 mt-8 text-center inline-flex items-center dark:bg-pink-600 dark:hover:bg-pink-400 dark:focus:ring-pink-300"
@@ -39,9 +39,9 @@
           <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
-        </button>
+        </button> -->
         <!-- Dropdown menu -->
-        <div id="dropdown" class="z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 mx-14 my-2" :class="{ hidden: flag == true }">
+        <!-- <div id="dropdown" class="z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 mx-14 my-2 z-99 fixed" :class="{ hidden: flag == true }">
           <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
             <li>
               <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">English</a>
@@ -56,15 +56,43 @@
               <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dutch</a>
             </li>
           </ul>
+        </div> -->
+        <div class="mt-6 mx-12 p-2 font-inter grid grid-cols-3 gap-1">
+          <select
+            id="countries"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mx-2"
+          >
+            <option selected>Choose a country</option>
+            <option value="US">English</option>
+            <option value="CA">Canada</option>
+            <option value="FR">France</option>
+            <option value="DE">Germany</option>
+          </select>
+          <!--Switch-->
+          <div class="rounded-full bg-slate px-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-14 h-14 mx-auto rounded-full bg-slate-300 p-2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+            </svg>
+          </div>
+          <select
+            id="countries"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 -mx-2"
+          >
+            <option selected>Choose a country</option>
+            <option value="US">English</option>
+            <option value="CA">Canada</option>
+            <option value="FR">France</option>
+            <option value="DE">Germany</option>
+          </select>
         </div>
       </div>
 
       <!--tabel bahasa-->
-      <div class="mt-6 mx-8 mb-14 p-2 font-inter grid grid-cols-2 gap-2">
+      <div class="mt-4 mx-8 mb-8 p-2 font-inter grid grid-cols-2 gap-2">
         <textarea
           cols="50"
           rows="10"
-          class="mx-6 p-4 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-pink-500 focus:ring-pink-400 rounded-md sm:text-xl focus:ring-1 "
+          class="mx-6 p-4 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-pink-500 focus:ring-pink-400 rounded-md sm:text-xl focus:ring-1"
           placeholder="Input text... "
         />
         <textarea
@@ -75,8 +103,16 @@
         />
       </div>
 
-      <!--Pilih bahasa-->
-
+      <!--Submit-->
+      <div class="mt-4 mx-8 mb-8 p-2 font-inter grid grid-cols-3">
+        <label></label>
+        <button
+          type="submit"
+          class="text-white bg-blue-700 hover:bg-blue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Submit
+        </button>
+      </div>
       <!-- <div class="py-5 px-10">
       <input
         id="text"
