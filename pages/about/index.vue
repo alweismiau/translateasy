@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen bg-white">
+  <div class="h-screen bg-slate-200">
     <nav
       class="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-500 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-500"
     >
@@ -54,42 +54,45 @@
       </div>
     </nav>
 
-    <div class="max-w-4xl mx-auto container translate-y-[14vh]">
-      <section
-        id="hero"
-        class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12 scroll-mt-40 widescreen:section-min-height tallscreen:section-min-height"
-      >
-        <article class="sm:w-1/2">
-          <h2
-            class="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left text-slate-900 dark:text-black"
+    <!-- about -->
+    <div
+      class="bg-white rounded-2xl container mx-auto translate-y-[14vh] shadow-2xl p-3"
+    >
+      <div class=" font-inter grid grid-cols-2 gap-3">
+        <div
+          class="p-3 border shadow-sm border-slate-300 focus:outline-none rounded-2xl focus:ring-1"
+        >
+          <section
+            class="flex flex-col-reverse justify-center sm:flex-row px-5 items-center"
           >
-            Translateasyy
-            <span class="text-indigo-700 dark:text-indigo-300"
-              >Makes it easier</span
-            >
-            For communicate and translate
-          </h2>
-          <p
-            class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400"
-          >
-            Communicate confidently and accurately in multiple languages
-          </p>
-          <p
-            class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400"
-          >
-            Group 4
-          </p>
-        </article>
-        <img class="w-1/2" src="~/assets/book.jpg" alt="book" />
-      </section>
-      <hr class="mx-auto bg-black dark:bg-white w-1/2" />
-
-      <!-- Teams -->
-      <section
-        id="team"
-        class="p-6 my-5 scroll-mt-20 widescreen:section-min-height tallscreen:section-min-height"
-      >
-        <div class="text-5xl text-black text-center font-bold ">
+            <article class="sm:w-1/2">
+              <h2
+                class="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left text-slate-900 dark:text-black"
+              >
+                Translateasyy
+                <span class="text-indigo-700 dark:text-indigo-300"
+                  >Makes it easier</span
+                >
+                For communicate and translate
+              </h2>
+              <p
+                class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400"
+              >
+                Communicate confidently and accurately in multiple languages
+              </p>
+              <p
+                class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-600"
+              >
+                Group 4
+              </p>
+            </article>
+            <img class="w-1/2 mx-3 pb-40" src="~/assets/book.png" alt="book" />
+          </section>
+        </div>
+        <div
+          class="p-3 border shadow-sm border-slate-300 focus:outline-none rounded-2xl focus:ring-1"
+        >
+        <div class="text-4xl text-black text-center font-bold ">
           Meet Our Team
         </div>
 
@@ -111,6 +114,7 @@
               <div class="text-sm text-center text-darkgray">5027211008</div>
             </div>
           </div>
+
           <div
             class="flex flex-col bg-slate-300 rounded-lg py-8 px-6 space-y-4 lg:space-y-6"
           >
@@ -128,6 +132,7 @@
               <div class="text-sm text-center text-darkgray">5027211020</div>
             </div>
           </div>
+          
           <div
             class="flex flex-col bg-slate-300 rounded-lg py-8 px-6 space-y-4 lg:space-y-6"
           >
@@ -197,7 +202,11 @@
             </div>
           </div>
         </div>
-      </section>
+
+        </div>
     </div>
+      
+    </div>
+    <h2 class="pt-28 text-center">©️Translateasyy</h2>
   </div>
 </template>
