@@ -22,7 +22,7 @@
         <div class="flex md:order-2">
           <select
             id="countries"
-            class="bg-pink-50 border border-pink-100 text-pink-100 text-sm rounded-lg focus:ring-pink-200 focus:border-pink-100 block w-full p-2.5 dark:bg-pink-600 dark:border-pink-600 dark:placeholder-pink-400 dark:text-white dark:focus:ring-pink-500 dark:focus:border-pink-500 focus:ring-2 hover-bg-pink-100 dark:hover:bg-pink-700"
+            class="text-white hover:bg-blue focus:ring-4 focus:outline-none focus:ring-blue-900 text-sm rounded-lg focus:ring-blue-200 focus:border-blue-100 block w-full p-2.5 dark:bg-blue-900 dark:hover:bg-blue-800 dark:focus:ring-blue-900"
           >
             <option selected>Indonesia</option>
             <option value="US">English</option>

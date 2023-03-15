@@ -22,8 +22,9 @@
         <div class="flex md:order-2">
           <select
             id="countries"
-            class="bg-pink-50 border border-pink-100 text-pink-100 text-sm rounded-lg focus:ring-pink-200 focus:border-pink-100 block w-full p-2.5 dark:bg-pink-600 dark:border-pink-600 dark:placeholder-pink-400 dark:text-white dark:focus:ring-pink-500 dark:focus:border-pink-500 focus:ring-2 hover-bg-pink-100 dark:hover:bg-pink-700"
-          >
+            class="text-white hover:bg-blue focus:ring-4 focus:outline-none focus:ring-blue-900 text-sm rounded-lg focus:ring-blue-200 focus:border-blue-100 block w-full p-2.5 dark:bg-blue-900 dark:hover:bg-blue-800 dark:focus:ring-blue-900"
+          > 
+          <!-- text-white hover:bg-blue focus:ring-4 focus:outline-none focus:ring-blue-900 font-medium rounded-lg text-base w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-900 dark:hover:bg-blue-800 dark:focus:ring-blue-900 -->
             <option selected>Indonesia</option>
             <option value="US">English</option>
           </select>
@@ -108,14 +109,14 @@
           v-model="text"
           cols="50"
           rows="10"
-          class="mx-6 p-4 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-pink-500 focus:ring-pink-400 rounded-md sm:text-xl focus:ring-1"
+          class="mx-6 p-4 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-blue-400 rounded-md sm:text-xl focus:ring-1"
           placeholder="Input text... "
         ></textarea>
         <textarea
           v-model="text"
           cols="50"
           rows="10"
-          class="mx-6 p-4 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-pink-500 focus:ring-pink-400 rounded-md sm:text-xl focus:ring-1"
+          class="mx-6 p-4 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-blue-400 rounded-md sm:text-xl focus:ring-1"
           placeholder="Input text..."
         ></textarea>
       </div>
@@ -145,7 +146,7 @@
         <button
           @click=""
           type="submit"
-          class="text-white bg-pink-500 hover:bg-blue focus:ring-4 focus:outline-none focus:ring-pink-500 font-medium rounded-lg text-base w-full sm:w-auto px-5 py-2.5 text-center dark:bg-pink-500 dark:hover:bg-pink-400 dark:focus:ring-pink-500"
+          class="text-white hover:bg-blue focus:ring-4 focus:outline-none focus:ring-blue-900 font-medium rounded-lg text-base w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-900 dark:hover:bg-blue-800 dark:focus:ring-blue-900"
         >
           Submit
         </button>
