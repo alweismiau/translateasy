@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen bg-slate-200">
+  <div class="h-screen bg-[url('~/assets/bg4.png')] bg-no-repeat bg-cover">
     <nav
       class="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-500 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-500"
     >

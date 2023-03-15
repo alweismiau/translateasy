@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen bg-slate-200">
+  <div class="h-screen bg-[url('~/assets/bg4.png')] bg-no-repeat bg-cover">
     <nav
       class="px-2 sm:px-4 py-2.5 dark:bg-gray-500 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-500"
     >
@@ -110,14 +110,14 @@
           rows="10"
           class="mx-6 p-4 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-pink-500 focus:ring-pink-400 rounded-md sm:text-xl focus:ring-1"
           placeholder="Input text... "
-        />
+        ></textarea>
         <textarea
           v-model="text"
           cols="50"
           rows="10"
           class="mx-6 p-4 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-pink-500 focus:ring-pink-400 rounded-md sm:text-xl focus:ring-1"
           placeholder="Input text..."
-        />
+        ></textarea>
       </div>
 
       <!--Submit-->
@@ -167,7 +167,7 @@
         </button>
       </div>
     </div>
-      <h2 class="pt-28 p-9 text-center ">
+      <h2 class="pt-32 p-9 text-center text-black ">
         ©️Translateasyy
       </h2>
   </div>
