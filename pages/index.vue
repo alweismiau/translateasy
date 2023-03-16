@@ -79,7 +79,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-14 h-14 mx-auto rounded-full bg-slate-300 p-3 hover:bg-gray-400"
+            class="w-14 h-14 mx-auto rounded-full bg-slate-300 p-3 hover:bg-gray-400 transform active:scale-75 transition-transform"
           >
             <path
               stroke-linecap="round"
@@ -133,7 +133,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-14 h-14 mx-auto rounded-full bg-slate-300 p-4 hover:bg-gray-200"
+            class="w-14 h-14 mx-auto rounded-full bg-slate-300 p-4 hover:bg-gray-200 transform active:scale-75 transition-transform"
           >
             <path
               stroke-linecap="round"
@@ -146,7 +146,7 @@
         <button
           @click=""
           type="submit"
-          class="text-white hover:bg-blue focus:ring-4 focus:outline-none focus:ring-blue-900 font-medium rounded-lg text-base w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-900 dark:hover:bg-blue-800 dark:focus:ring-blue-900"
+          class="text-white hover:bg-blue focus:ring-4 focus:outline-none focus:ring-blue-900 font-medium rounded-lg text-base w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-900 dark:hover:bg-blue-800 dark:focus:ring-blue-900 transform active:scale-75 transition-transform"
         >
           Submit
         </button>
@@ -157,7 +157,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-14 h-14 mx-auto rounded-full bg-slate-300 p-4 hover:bg-gray-200"
+            class="w-14 h-14 mx-auto rounded-full bg-slate-300 p-4 hover:bg-gray-200 transform active:scale-75 transition-transform"
           >
             <path
               stroke-linecap="round"

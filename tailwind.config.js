@@ -16,5 +16,10 @@ module.exports = {
       }
     },
   },
+  variants:{
+    extend:{
+      scale:["active"],
+    },
+  },
   plugins: [require('flowbite', 'tailwind-scrollbar-hide')],
 }
