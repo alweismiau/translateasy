@@ -19,16 +19,8 @@
           >
         </div>
         <!-- language -->
-        <div class="flex md:order-2">
-          <select
-            id="countries"
-            class="text-white hover:bg-blue focus:ring-4 focus:outline-none focus:ring-blue-900 text-sm rounded-lg focus:ring-blue-200 focus:border-blue-100 block w-full p-2.5 dark:bg-blue-900 dark:hover:bg-blue-800 dark:focus:ring-blue-900"
-          > 
-          <!-- text-white hover:bg-blue focus:ring-4 focus:outline-none focus:ring-blue-900 font-medium rounded-lg text-base w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-900 dark:hover:bg-blue-800 dark:focus:ring-blue-900 -->
-            <option selected>Indonesia</option>
-            <option value="US">English</option>
-          </select>
-        </div>
+ 
+        
         <div
           class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
           id="navbar-sticky"
@@ -63,9 +55,12 @@
           id="countries"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mx-2"
         >
-          <option selected>Choose a language</option>
-          <option value="US">English</option>
-          <option value="ID">Indonesia</option>
+        <!-- <option selected>Indonesia</option>
+            <option value="US">English</option> -->
+          <option value="">Choose a language</option>
+          
+          <option value="en">English</option>
+          <option value="id">Indonesia</option>
           <option value="CA">Canada</option>
           <option value="FR">France</option>
           <option value="DE">Germany</option>
@@ -89,13 +84,13 @@
           </svg>
         </button>
         <select
-          v-model="lang"
+          v-model="translang"
           id="countries"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 -mx-2"
         >
-          <option selected>Choose a language</option>
-          <option value="US">English</option>
-          <option value="ID">Indonesia</option>
+          <option value="">Choose a language</option>
+          <option value="en">English</option>
+          <option value="id">Indonesia</option>
           <option value="CA">Canada</option>
           <option value="FR">France</option>
           <option value="DE">Germany</option>
@@ -113,7 +108,7 @@
           placeholder="Input text... "
         ></textarea>
         <textarea
-          v-model="text"
+          id="outputtext"
           cols="50"
           rows="10"
           class="mx-6 p-4 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-blue-400 rounded-md sm:text-xl focus:ring-1"
@@ -144,7 +139,7 @@
         </button>
         <!-- submit -->
         <button
-          @click=""
+          @click="translator()"
           type="submit"
           class="text-white hover:bg-blue focus:ring-4 focus:outline-none focus:ring-blue-900 font-medium rounded-lg text-base w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-900 dark:hover:bg-blue-800 dark:focus:ring-blue-900 transform active:scale-75 transition-transform"
         >
@@ -175,11 +170,13 @@
 </template>
 
 <script>
+import translate from 'translate'
 export default {
   data() {
     return {
       text: "",
-      lang: "US",
+      lang: "",
+      translang: "",
     };
   },
   methods: {
@@ -188,6 +185,15 @@ export default {
       msg.text = this.text;
       msg.lang = this.lang;
       window.speechSynthesis.speak(msg);
+    },
+    async translator () {
+      if (this.lang == this.translang){
+        console.log("test")
+      }else{
+        const terjemahan = await translate(this.text, {from: this.lang, to: this.translang})
+        console.log(terjemahan)
+        document.querySelector('#outputtext').innerHTML = terjemahan
+      }
     },
   },
 };
