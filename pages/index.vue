@@ -61,10 +61,10 @@
           
           <option value="en">English</option>
           <option value="id">Indonesia</option>
-          <option value="CA">Canada</option>
-          <option value="FR">France</option>
-          <option value="DE">Germany</option>
-          <option value="ja-JP">Japanese</option>
+          <option value="ca">Canada</option>
+          <option value="fr">France</option>
+          <option value="de">Germany</option>
+          <option value="ja">Japanese</option>
         </select>
         <!--Switch-->
         <button type="button" class="rounded-full bg-slate px-4">
@@ -91,10 +91,10 @@
           <option value="">Choose a language</option>
           <option value="en">English</option>
           <option value="id">Indonesia</option>
-          <option value="CA">Canada</option>
-          <option value="FR">France</option>
-          <option value="DE">Germany</option>
-          <option value="ja-JP">Japanese</option>
+          <option value="ca">Canada</option>
+          <option value="fr">France</option>
+          <option value="de">Germany</option>
+          <option value="ja">Japanese</option>
         </select>
       </div>
 
@@ -102,17 +102,18 @@
       <div class="mt-4 mx-8 mb-8 p-2 font-inter grid grid-cols-2 gap-2">
         <textarea
           v-model="text"
+          id="text"
           cols="50"
           rows="10"
           class="mx-6 p-4 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-blue-400 rounded-md sm:text-xl focus:ring-1"
           placeholder="Input text... "
         ></textarea>
-        <textarea
+        <textarea disabled
           id="outputtext"
           cols="50"
           rows="10"
           class="mx-6 p-4 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-blue-400 rounded-md sm:text-xl focus:ring-1"
-          placeholder="Input text..."
+
         ></textarea>
       </div>
 
@@ -187,13 +188,13 @@ export default {
       window.speechSynthesis.speak(msg);
     },
     async translator () {
-      if (this.lang == this.translang){
-        console.log("test")
-      }else{
-        const terjemahan = await translate(this.text, {from: this.lang, to: this.translang})
-        console.log(terjemahan)
-        document.querySelector('#outputtext').innerHTML = terjemahan
-      }
+        if(this.translang  && this.lang !=''){
+          const terjemahan = await translate(this.text, {from: this.lang, to: this.translang})
+          console.log(terjemahan)
+          document.querySelector('#outputtext').innerHTML = terjemahan
+        }else {
+          alert("error")
+        }
     },
   },
 };
