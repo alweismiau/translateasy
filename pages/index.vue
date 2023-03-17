@@ -67,7 +67,7 @@
           <option value="ja">Japanese</option>
         </select>
         <!--Switch-->
-        <button type="button" class="rounded-full bg-slate px-4">
+        <button @click="switchlanguange()" type="button" class="rounded-full bg-slate px-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -222,6 +222,12 @@ export default {
           alert("error")
         }
     },
+    switchlanguange() {
+      const a = this.lang
+      const b = this.translang
+      this.translang = a
+      this.lang = b
+    }
   },
 };
 </script>
