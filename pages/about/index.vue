@@ -20,13 +20,6 @@
         </div>
         <!-- language -->
         <div class="flex md:order-2">
-          <select
-            id="countries"
-            class="text-white hover:bg-blue focus:ring-4 focus:outline-none focus:ring-blue-900 text-sm rounded-lg focus:ring-blue-200 focus:border-blue-100 block w-full p-2.5 dark:bg-blue-900 dark:hover:bg-blue-800 dark:focus:ring-blue-900"
-          >
-            <option selected>Indonesia</option>
-            <option value="US">English</option>
-          </select>
         </div>
         <div
           class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
