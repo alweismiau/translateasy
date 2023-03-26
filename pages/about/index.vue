@@ -148,8 +148,8 @@
           >
             <div class="flex justify-center">
               <img
-                src="/images/about/bg-circle-rizki.png"
-                class="w-32 lg:w-40"
+              src="~/assets/teams/agoy.jpg"
+                class="w-32 lg:w-20"
                 alt="Athallah Narda Wiyoga"
               />
             </div>

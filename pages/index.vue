@@ -166,6 +166,7 @@
         </button>
         <button>
           <svg
+          @click="download"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -228,7 +229,55 @@ export default {
       const b = this.translang
       this.translang = a
       this.lang = b
-    }
+    },
+  async download() {
+    const terjemahan = await translate(this.text, { from: this.lang, to: this.translang });
+    const msg = new SpeechSynthesisUtterance();
+    msg.lang = this.translang;
+    msg.text = terjemahan;
+    this.utterance = msg;
+
+    speechSynthesis.speak(msg);
+
+    this.generateAudioDownload(msg.lang, msg.voice);
+  },
+
+  generateAudioDownload(lang, voice) {
+    navigator.mediaDevices.getUserMedia({ audio: true })
+      .then((stream) => {
+        const mediaRecorder = new MediaRecorder(stream);
+        const audioData = [];
+
+        mediaRecorder.addEventListener('dataavailable', (event) => {
+          audioData.push(event.data);
+        });
+
+        mediaRecorder.addEventListener('stop', () => {
+          const blob = new Blob(audioData, { type: 'audio/wav' });
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement('a');
+
+          link.href = url;
+          link.download = 'speech.wav';
+          document.body.appendChild(link);
+          link.click();
+
+          setTimeout(() => {
+            URL.revokeObjectURL(url);
+            document.body.removeChild(link);
+          }, 0);
+        });
+
+        mediaRecorder.start();
+
+        this.utterance.addEventListener('end', () => {
+          mediaRecorder.stop();
+        });
+      })
+      .catch((error) => {
+        console.error('Failed to get user media', error);
+      });
+  }
   },
 };
 </script>
