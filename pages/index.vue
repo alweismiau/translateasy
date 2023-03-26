@@ -101,12 +101,12 @@
 
       <!--tabel bahasa-->
       <div class="mt-4 mx-8 mb-8 p-2 font-inter grid grid-cols-2 gap-2">
-        <textarea
+        <textarea id="text"
           v-model="text"
-          id="text"
+          
           cols="50"
           rows="10"
-          class="mx-6 p-4 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-blue-400 rounded-md sm:text-xl focus:ring-1"
+          class="text mx-6 p-4 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-blue-400 rounded-md sm:text-xl focus:ring-1"
           placeholder="Input text... "
         ></textarea>
         <textarea disabled
@@ -197,6 +197,7 @@ export default {
       text: "",
       lang: "",
       translang: "",
+      terjemahan: ""
     };
   },
   methods: {
@@ -217,18 +218,24 @@ export default {
     },
     async translator () {
         if(this.translang  && this.lang !=''){
-          const terjemahan = await translate(this.text, {from: this.lang, to: this.translang})
-          console.log(terjemahan)
-          document.querySelector('#outputtext').innerHTML = terjemahan
+          this.terjemahan = await translate(this.text, {from: this.lang, to: this.translang})
+          document.querySelector('#outputtext').innerHTML = this.terjemahan
         }else {
           alert("error")
         }
     },
-    switchlanguange() {
+    async switchlanguange() {
       const a = this.lang
       const b = this.translang
+      const c = this.text
       this.translang = a
       this.lang = b
+      this.text = this.terjemahan
+      
+      const test = await translate(this.text, {from: this.lang, to: this.translang})
+      document.querySelector('#outputtext').innerHTML = test
+        
+        
     },
   async download() {
     const terjemahan = await translate(this.text, { from: this.lang, to: this.translang });
