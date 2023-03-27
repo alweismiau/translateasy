@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "village";
+    src: local("village"),
+     url(~assets/village/Village-wLn3.ttf) format("truetype");
+}
+
+html {
+    font-family: "village";
+}

@@ -22,4 +22,7 @@ module.exports = {
     },
   },
   plugins: [require('flowbite', 'tailwind-scrollbar-hide')],
+  css: [
+    "~layouts/global.css",
+],
 }

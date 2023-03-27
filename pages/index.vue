@@ -1,50 +1,54 @@
 <template>
   <div class="h-screen bg-[url('~/assets/bg4.png')] bg-no-repeat bg-cover">
     <nav
-      class="px-2 sm:px-4 py-2.5 dark:bg-gray-500 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-500"
-    >
-      <div
-        class="container flex flex-wrap items-center justify-between mx-auto"
-      >
-        <!-- logo -->
-        <div class="flex items-center">
-          <img
-            src="~/assets/logo.png"
-            class="mr-4 sm:h-11"
-            alt="Translateasy logo"
-          />
-          <span
-            class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
-            >Translateasyy</span
-          >
-        </div>
-        <div class="flex md:order-2">
-        </div>
-        
-        
-        <div
-          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-          id="navbar-sticky"
-        >
-          <ul
-            class="flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium"
-          >
-            <li>
-              <NuxtLink to="/" class="block py-2 pl-3 pr-4 text-white md:p-0"
-                >Translator</NuxtLink
-              >
-            </li>
-            <li>
-              <NuxtLink
-                to="/about"
-                class="block py-2 pl-3 pr-4 text-gray-400 md:p-0 md:dark:hover:text-white"
-                >About</NuxtLink
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+		class="bg-white px-2 sm:px-4 py-2.5 dark:bg-white fixed w-full z-20 top-0 left-0 border-b border-gray-200 "
+	  >
+		<div
+		  class="container flex flex-wrap items-center justify-between mx-auto"
+		>
+		  <!-- logo -->
+		  <div class="flex items-center">
+			<img
+			  src="~/assets/logo.png"
+			  class="mr-4 sm:h-11"
+			  alt="Translateasy logo"
+			/>
+			<span
+			  class="self-center text-xl font-semibold whitespace-nowrap dark:text-blue-500"
+			  >Translateasyy</span
+			>
+		  </div>
+		  <!-- language -->
+		  <div class="flex md:order-2">
+		  </div>
+		  <div
+			class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+			id="navbar-sticky"
+		  >
+			<ul
+			  class="flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium"
+			>
+			  <li class="group">
+				<NuxtLink
+				  to="/"
+				  class="block py-2 pl-3 pr-4 text-black md:p-0 font-medium group-hover:text-black transition-all duration-300 "
+				  >Translator</NuxtLink
+				>
+				<div class="bg-black h-0.5 mt-0.5 group-hover:scale-y-100 group-hover:bg-black group-hover:block w-[100%] transition-all duration-300"></div>
+			  </li>
+			  
+        <li class="group">
+				<NuxtLink
+				  to="/about"
+				  class="block py-2 pl-3 pr-4 text-gray-400 md:p-0 md:dark:hover:text-black"
+				  >About</NuxtLink
+				>
+        <div class="h-0.5 mt-0.5 group-hover:scale-y-100 group-hover:bg-black group-hover:block w-[100%] transition-all duration-300"></div>
+				</li>
+			</ul>
+		  </div>
+		</div>
+	  </nav>
 
     <!-- isi -->
     <div
