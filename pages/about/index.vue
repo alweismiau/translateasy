@@ -112,7 +112,7 @@
               Please leave a comment bellow ^^
             </p>
             <form action="https://fabform.io/f/mb5wXp7" method="post">
-              <div class="form-group mb-6">
+              <div class="form-group mb-2 mt-4">
                 <input
                   name="name"
                   type="text"
@@ -121,7 +121,7 @@
                   required
                 />
               </div>
-              <div class="form-group mb-6">
+              <div class="form-group mb-2">
                 <input
                   name="email"
                   type="email"
@@ -130,7 +130,7 @@
                   required
                 />
               </div>
-              <div class="form-group mb-6">
+              <div class="form-group mb-2">
                 <input
                   name="message"
                   type="text"
@@ -231,7 +231,7 @@
             />
             <div class="flex-1 my-4">
               <p class="text-xl font-semibold leading-snug">
-                Aloysius Bataona Manulang
+                Aloysius Bataona Manullang
               </p>
               <p>5027211008</p>
             </div>
@@ -246,7 +246,7 @@
               src="~/assets/teams/duljek.png"
             />
             <div class="flex-1 my-4">
-              <p class="text-xl font-semibold leading-snug">Abdul Zaki</p>
+              <p class="text-xl font-semibold leading-snug">Abdul Zaki Syahrul Rahmat</p>
               <p>5027211020</p>
             </div>
           </div>
