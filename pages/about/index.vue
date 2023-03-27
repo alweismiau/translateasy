@@ -62,10 +62,8 @@
         <div
           class="p-3 border shadow-sm border-slate-300 focus:outline-none rounded-2xl focus:ring-1"
         >
-          <section
-            class="flex flex-col-reverse justify-center sm:flex-row px-5 items-center"
-          >
-            <article class="sm:w-1/2">
+          <section class="sm:flex-row px-5">
+            <article class="space-y-4">
               <h2
                 class="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left text-slate-900 dark:text-black"
               >
@@ -76,9 +74,18 @@
                 For communicate and translate
               </h2>
               <p
-                class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400"
+                class="leading-normal max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400"
               >
-                Communicate confidently and accurately in multiple languages
+                Welcome to our translation application! Our mission is to break
+                down language barriers and make communication easier for
+                everyone. 
+              </p>
+              <p
+                class="leading-normal max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400"
+              >
+                With our app, you can quickly and easily translate
+                text between multiple languages, including English, Indonesia,
+                Canada, French, Germany, and Japanese.
               </p>
               <p
                 class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-600"
@@ -86,7 +93,7 @@
                 Group 4
               </p>
             </article>
-            <img class="w-1/2 mx-3 pb-40" src="~/assets/book.png" alt="book" />
+            <!-- <img class="w-1/2 mx-3 pb-40" src="~/assets/book.png" alt="book" /> -->
           </section>
         </div>
         <div
@@ -104,66 +111,52 @@
             >
               Please leave a comment bellow ^^
             </p>
-            <form action="https://fabform.io/f/9JjsdQz" method="post">
-				<div class="form-group mb-6"> 
-
-					<input
-					name="name"
-					type="text"
-					class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-					placeholder="Name"
-					required
-				  />
-				</div>
-				<div class="form-group mb-6">
-
-					<input
-					  name="email"
-					  type="email"
-					  class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-					  placeholder="Email address"
-					  required
-					/>
-				</div>
-				<div class="form-group mb-6">
-
-					<input
-					  name="message"
-					  type="text"
-					  class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-					  id="exampleFormControlTextarea13"
-					  rows="3"
-					  placeholder="Message"
-					  required
-					/>
-				</div>
-              <button class="button is-link w-full
-		px-6
-		py-2.5
-		bg-blue-600
-		text-white
-		font-medium
-		text-xs
-		leading-tight
-		uppercase
-		rounded
-		shadow-md
-		hover:bg-blue-700 hover:shadow-lg
-		focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
-		active:bg-blue-800 active:shadow-lg
-		transition
-		duration-150
-		ease-in-out" type="submit">Submit</button>
+            <form action="https://fabform.io/f/mb5wXp7" method="post">
+              <div class="form-group mb-6">
+                <input
+                  name="name"
+                  type="text"
+                  class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                  placeholder="Name"
+                  required
+                />
+              </div>
+              <div class="form-group mb-6">
+                <input
+                  name="email"
+                  type="email"
+                  class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                  placeholder="Email address"
+                  required
+                />
+              </div>
+              <div class="form-group mb-6">
+                <input
+                  name="message"
+                  type="text"
+                  class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                  id="exampleFormControlTextarea13"
+                  rows="3"
+                  placeholder="Message"
+                  required
+                />
+              </div>
+              <button
+                class="button is-link w-full px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                type="submit"
+              >
+                Submit
+              </button>
             </form>
-			
           </div>
-<div class="">
-	<img
-            src="~/assets/nj.gif"
-            class="mr-4 sm:h-11"
-            alt="Translateasy logo"
-          />
-</div>
+
+          <div class="">
+            <img
+              src="~/assets/nj.gif"
+              class="mr-4 sm:h-72 md:h-72 lg:h-72 xl:h-72 flex justify-center mx-40"
+              alt="Translateasy logo"
+            />
+          </div>
         </div>
       </div>
     </div>

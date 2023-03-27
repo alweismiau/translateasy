@@ -185,6 +185,12 @@
             />
           </svg>
         </button>
+        <img
+              src="~/assets/butterfly.gif"
+              class="xl:h-20"
+              alt="Translateasy logo"
+              style="margin-top: -65px;"
+            />
       </div>
     </div>
       <h2 class="pt-32 p-9 text-center text-black ">
